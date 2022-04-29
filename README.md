@@ -3,3 +3,5 @@ Proyecto final hecho en Unity para la clase de Gráficas Computacionales
 
 ### Descripción de la escena
 El proyecto se trata de simular una pequeña partida de Plantas vs Zombies. La escena contendrá un jardín con diferentes texturas de pasto para marcar la cuadrícula donde se encuentra cada planta. Con un botón se podrá spawnear un zombie en alguna de las filas de manera aleatoria y las plantas lo atacarán. El escenario también contará con iluminación que sale desde el lado de los zombies. 
+
+![PvZ game screen](https://i.3djuegos.com/juegos/4225/plants_vs_zombies/fotos/maestras/plants_vs_zombies-1901711.jpg)

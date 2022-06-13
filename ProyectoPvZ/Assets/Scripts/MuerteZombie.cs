@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MuerteZombie : MonoBehaviour
 {
-    private VidaZombie vida;
+    private Health hscr;
     // Start is called before the first frame update
     void Start()
     {
-        vida = gameObject.GetComponent<VidaZombie>();
+        hscr = gameObject.GetComponent<Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(vida.vida <= 0)
+        if(hscr.health <= 0)
         {
             Destroy(gameObject);
         }

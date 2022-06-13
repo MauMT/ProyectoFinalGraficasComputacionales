@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GuisanteProyectil : MonoBehaviour
 {
-    public float velocidad;
-    public int daño;
+    public float velocidad = 0f;
+    int daño = 10;
     public Vector3 posicionInicial;
+    
 
 
     void Start()
@@ -17,17 +18,23 @@ public class GuisanteProyectil : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.right * velocidad * Time.deltaTime);
+
+        // destroys projectiles when they go out of the screen
         if(Vector3.Distance(transform.position, posicionInicial) > 10)
         {
             Destroy(gameObject);
+            //Debug.Log("se salió de la pantalla");
         }
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Zombie")
         {
-            other.GetComponent<VidaZombie>().vida -= daño;
+            
+            Debug.Log(other.GetComponent<Health>().health);
+            other.GetComponent<Health>().health -= daño;
+            Debug.Log(other.GetComponent<Health>().health);
             Destroy(gameObject);
         }
     }

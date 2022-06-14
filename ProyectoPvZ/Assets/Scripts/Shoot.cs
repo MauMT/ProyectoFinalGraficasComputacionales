@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    public float Cooldown;
+    private float Cooldown=1f;
     private float cd;
     public GameObject pea;
     Vector3 posicionInicial;

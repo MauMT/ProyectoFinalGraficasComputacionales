@@ -80,7 +80,9 @@ public class ZombieSpawner : MonoBehaviour
         float casilla = (GetRandomTile()* - 1f) - 0.36f;
         Debug.Log(casilla);
         // Instantiate the zombie and assigns it speed
-        Instantiate(objToSpawn, new Vector3(5.55f, 0.815f, casilla), transform.rotation * Quaternion.Euler (0f, -90f, 0f)).GetComponent<MovimientoZombie>().velocidad = 0.25f;
+        GameObject newZombie = Instantiate(objToSpawn, new Vector3(5.55f, 0.815f, casilla), transform.rotation * Quaternion.Euler (0f, -90f, 0f));
+        newZombie.GetComponent<MovimientoZombie>().velocidad = 0.2f;
+        newZombie.GetComponent<Health>().health = 40f;
     }
     
 }

@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float health = 30;
+    public float health;
+    public AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource.Play();
+    }
 }
